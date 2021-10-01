@@ -1,8 +1,7 @@
 let title = "MyCalc";
 console.log(typeof title);
-let screens = "Простые, Сложные, Интерактивные";
+let screens = "Простые, Сложные, Интерактивные".toLowerCase();
 console.log(screens.length);
-console.log(screens.toLowerCase());
 const forScreens = screens.split(", ");
 console.log(forScreens);
 let screenPrice = 1;
