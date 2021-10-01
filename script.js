@@ -1,9 +1,12 @@
-let title;
-let screens;
-let screenPrice;
-let rollback;
-let fullPrice;
-let adaptive;
+let title = "MyCalc";
+console.log(typeof title)
+let screens = "простые, сложные, интерактивные";
+let screenPrice = 1;
+let rollback = 20;
+let fullPrice = 250000;
+console.log(typeof fullPrice);
+let adaptive = true;
+console.log(typeof adaptive);
 
 console.log("Any text")
 
