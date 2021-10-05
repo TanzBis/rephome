@@ -2,9 +2,8 @@
 let title = prompt("Как называется ваш проект?");
 console.log((title));
 console.log(typeof title);
-let screens = prompt("Какие типы экранов нужно разработать?".toLowerCase());
+let screens = prompt("Какие типы экранов нужно разработать?").toLowerCase();
 const forScreens = screens.split(", ");
-console.log((screens));
 console.log(forScreens);
 let screenPrice = +prompt("Сколько будет стоить данная работа?");
 console.log((screenPrice));
@@ -20,9 +19,8 @@ let servicePrice2 = +prompt("Cколько это будет стоить?");
 console.log(servicePrice2);
 let rollback = 70;
 let fullPrice = (screenPrice + servicePrice1 + servicePrice2);
-let servicePercentprice = fullPrice - (rollback/100);
-console.log(Math.ceil(servicePercentprice));
-console.log("Стоимость разработки сайта:", fullPrice, "рублей");
+let servicePercentprice = Math.ceil(fullPrice - (fullPrice * rollback / 100));
+console.log((servicePercentprice));
 if (fullPrice > 30000)
 {
   console.log("Даем скидку в 10%");
@@ -30,7 +28,7 @@ if (fullPrice > 30000)
     console.log("Даем скидку в 5%");
 } else if (15000 <= fullPrice &&  fullPrice > 0 ) {
     console.log("Скидка не предусмотрена");
-} else if(fullPrice > 0) {
+} else if(fullPrice < 0) {
     console.log("что-то пошло не так");
 }
 
