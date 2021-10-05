@@ -17,9 +17,9 @@ let service2 = prompt("Какой дополнительный тип услуг
 console.log(service2);
 let servicePrice2 = +prompt("Cколько это будет стоить?");
 console.log(servicePrice2);
-let rollback = 70;
+let rollback = 20;
 let fullPrice = (screenPrice + servicePrice1 + servicePrice2);
-let servicePercentprice = Math.ceil(fullPrice - (fullPrice * rollback / 100));
+let servicePercentprice = Math.ceil(fullPrice - (fullPrice * rollback/100));
 console.log((servicePercentprice));
 if (fullPrice > 30000)
 {
