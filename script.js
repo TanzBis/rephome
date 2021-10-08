@@ -48,10 +48,10 @@ const getTitle = function(title) {
     return title;  
 };
 
-const getAllServicePercentPrice = function(a, b) {
+const getServicePercentPrice = function(a, b) {
     return  Math.ceil(a - (a * b/100));
 };
-servicePercentPrice = getAllServicePrices(fullPrice, fullPrice, rollback);
+servicePercentPrice = getServicePercentPrice(fullPrice, fullPrice, rollback);
 
 
 // Функциональный блок
