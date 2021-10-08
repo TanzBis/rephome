@@ -40,19 +40,19 @@ allServicePrices = getAllServicePrices(servicePrice1, servicePrice2);
 function getFullPrice(screenPrice, allServicePrices) {
     return screenPrice + allServicePrices;
 }
-fullPrice = getAllServicePrices(screenPrice, allServicePrices);
+fullPrice = getFullPrice(screenPrice, allServicePrices);
 
 const getTitle = function(title) {
     if (title[0] === ' ') {
-        return title[1].toUpperCase() + title.slice(2).toLowerCase();
+        return title.trim() + title[0].toUpperCase() + title.slice(1).toLowerCase();
     } else {
         return title[0].toUpperCase() + title.slice(1).toLowerCase();
     }
 
 };
 
-const getAllServicePercentPrice = function(a, b, c) {
-    return  Math.ceil(a - (b * c/100));
+const getAllServicePercentPrice = function(a, b) {
+    return  Math.ceil(a - (a * b/100));
 };
 servicePercentPrice = getAllServicePrices(fullPrice, fullPrice, rollback);
 
@@ -60,7 +60,7 @@ servicePercentPrice = getAllServicePrices(fullPrice, fullPrice, rollback);
 // Функциональный блок
 console.log(getTitle(title));
 console.log(getRollbackMessage(fullPrice));
-console.log(getAllServicePrices(servicePercentPrice));
+console.log(getAllServicePrices(service1, service2));
 // showTypeOf(title);
 showTypeOf(screenPrice);
 showTypeOf(adaptive);
