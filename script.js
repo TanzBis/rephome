@@ -43,12 +43,9 @@ function getFullPrice(screenPrice, allServicePrices) {
 fullPrice = getFullPrice(screenPrice, allServicePrices);
 
 const getTitle = function(title) {
-    if (title[0] === ' ') {
-        return title.trim() + title[0].toUpperCase() + title.slice(1).toLowerCase();
-    } else {
-        return title[0].toUpperCase() + title.slice(1).toLowerCase();
-    }
-
+    title = title.trim();
+    title = title[0].toUpperCase() + title.toLowerCase();
+    return title;  
 };
 
 const getAllServicePercentPrice = function(a, b) {
