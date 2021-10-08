@@ -35,7 +35,6 @@ const getRollbackMessage = function(price) {
 const getAllServicePrices = function(service1, service2) {
     return service1 + service2;
 };
-allServicePrices = getAllServicePrices(servicePrice1, servicePrice2);
 
 function getFullPrice(screenPrice, allServicePrices) {
     return screenPrice + allServicePrices;
@@ -56,6 +55,7 @@ fullPrice = getFullPrice(screenPrice, allServicePrices);
 servicePercentPrice = getServicePercentPrice(fullPrice, fullPrice, rollback);
 showTypeOf(screenPrice);
 showTypeOf(adaptive);
+allServicePrices = getAllServicePrices(servicePrice1, servicePrice2);
 
 //Блок мусора
 
