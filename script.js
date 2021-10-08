@@ -40,7 +40,6 @@ allServicePrices = getAllServicePrices(servicePrice1, servicePrice2);
 function getFullPrice(screenPrice, allServicePrices) {
     return screenPrice + allServicePrices;
 }
-fullPrice = getFullPrice(screenPrice, allServicePrices);
 
 const getTitle = function(title) {
     title = title.trim();
@@ -51,18 +50,17 @@ const getTitle = function(title) {
 const getServicePercentPrice = function(a, b) {
     return  Math.ceil(a - (a * b/100));
 };
-servicePercentPrice = getServicePercentPrice(fullPrice, fullPrice, rollback);
-
 
 // Функциональный блок
-console.log(getTitle(title));
-console.log(getRollbackMessage(fullPrice));
-console.log(getAllServicePrices(service1, service2));
-// showTypeOf(title);
+fullPrice = getFullPrice(screenPrice, allServicePrices);
+servicePercentPrice = getServicePercentPrice(fullPrice, fullPrice, rollback);
 showTypeOf(screenPrice);
 showTypeOf(adaptive);
 
 //Блок мусора
 
 console.log(forScreens);
+console.log(getTitle(title));
+console.log(getRollbackMessage(fullPrice));
+console.log(getAllServicePrices(service1, service2));
 
